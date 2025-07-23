@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.section {
+  position: relative;
+  border: 1px solid black;
+  background-color: #e2e2e2;
+  padding: 50px 15px 15px 15px;
+  margin: 10px;
+  float: left;
+}
+
+/* Заголовки внутри секций */
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border: 1px solid black;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.title.chicken {
+  background-color: #d9534f;
+}
+
+.title.beef {
+  background-color: #5bc0de;
+}
+
+.title.sushi {
+  background-color: #5cb85c;
+}
+
+/* Desktop view: 3 секции в ряд */
+@media (min-width: 992px) {
+  .section {
+    width: 31%;
+  }
+}
+
+/* Tablet view: 2 секции в ряд + 1 внизу */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 48%;
+  }
+  .section:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/* Mobile view: каждая секция 100% */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+  }
+}
